@@ -5,7 +5,8 @@ async function fetchData() {
     );
     return result;
   } catch (error) {
-    console.log(`Error fetching data: ${error}`);
+    console.error(`Error fetching data: ${error}`);
+    throw error;
   }
 }
 export default fetchData;
