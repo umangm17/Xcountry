@@ -9,11 +9,15 @@ let Country = () => {
 
   useEffect(() => {
     const getdata = async () => {
-      const response = await fetchData();
-      const jsondata = await response.json();
-      // console.log(jsondata);
-      setData(jsondata);
-      //   console.log(data);
+      try {
+        const response = await fetchData();
+        const jsondata = await response.json();
+        // console.log(jsondata);
+        setData(jsondata);
+        //   console.log(data);
+      } catch (error) {
+        console.log(`Error fetching data: ${error}`);
+      }
     };
     getdata();
   }, []);
