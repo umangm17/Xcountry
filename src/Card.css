@@ -1,0 +1,13 @@
+.cardBody {
+  margin: 20px solid black;
+  border: 20px;
+  padding: 30px;
+  object-fit: cover;
+}
+.cardtext {
+  text-align: center;
+}
+
+.img {
+  object-fit: cover;
+}
